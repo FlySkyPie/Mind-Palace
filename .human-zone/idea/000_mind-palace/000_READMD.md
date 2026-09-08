@@ -8,9 +8,11 @@
 
 從另外一個角度來說，該計畫是為了緩解知識的詛咒 (Curse of knowledge) 對我造成的痛苦。
 
+## 具體作為
+
 該概念的具體嘗試包括但不限於：
 
 - [個人網站](https://github.com/FlySkyPie/flyskypie.github.io)
 - [個人網站（舊版）](https://github.com/FlySkyPie/flyskypie.github.io-v1)
 - [Sideproject TiddlyWiki](https://github.com/FlySkyPie/sideprojects-wiki)
-- 這個庫
+- 本文件所在的專案
