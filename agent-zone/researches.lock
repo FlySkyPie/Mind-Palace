@@ -3,7 +3,8 @@
 #
 # Check number in this file before you add your number,
 # the biggest number in this file plus one would be your serial number of research,
-# Add your number before you start doing research, your number MUST added by your self, any number not added by you IS NOT your number,
+# Add your number before you start doing research, your number MUST added by your self, any number NOT added by you IS NOT your number,
+# for example: you call edit file by add number 00005 but you got error message from the edit tool, the number IS NOT yours but added by other agent.
 # Remove number after you finish the research (and wrote report), if your number is not only number in this file,
 # Keep your number with `D` prefix after you finish the report, if your number is last/only number in this file, and remove other numbers with D prefix,
 # only keep one number with D prefix.
