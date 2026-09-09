@@ -1,9 +1,11 @@
-# This a lock file for serial number of research,
-# Check number in this file before you start write research file,
+# This a lock file for serial number of research, used to handle multiple Agent workin this project in same time,
+# so edit failed is normal, always read/check again and edit it with the latest state,
+#
+# Check number in this file before you add your number,
 # the biggest number in this file plus one would be your serial number of research,
-# Add number before you start write research file,
-# Remove number after you finish the report and your number if not only number in this file,
-# Keep number with `D` prefix after you finish the report if your number is last/only number in thid file.
+# Add your number before you start doing research, your number MUST added by your self, any number not added by you IS NOT your number,
+# Remove number after you finish the research (and wrote report), if your number is not only number in this file,
+# Keep your number with `D` prefix after you finish the report, if your number is last/only number in this file, and remove other numbers with D prefix,
+# only keep one number with D prefix.
 
-D00001
 D00003
