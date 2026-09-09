@@ -1,0 +1,8 @@
+# This a lock file for serial number of research,
+# Check number in this file before you start write research file,
+# the biggest number in this file plus one would be your serial number of research,
+# Add number before you start write research file,
+# Remove number after you finish the report and your number if not only number in this file,
+# Keep number with `D` prefix after you finish the report if your number is last/only number in thid file.
+
+D00000
