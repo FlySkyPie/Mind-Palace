@@ -203,20 +203,20 @@ Faithful 系列是社群維護的 Vanilla 紋理重建專案，從零開始以�
 
 ### 7.1 組合策略
 
-```
+```mermaid
 graph TD
     A[Botcraft AssetsManager] --> B[assets/minecraft/blockstates/]
     A --> C[assets/minecraft/models/block/]
     A --> D[assets/minecraft/textures/block/]
     A --> E[assets/custom/]
 
-    B --> F[Create Mod (MIT) blockstates]
-    B --> G[EnderIO (Unlicense) blockstates]
-    C --> H[Create Mod (MIT) models]
-    C --> I[EnderIO (Unlicense) models]
-    D --> J[unused-textures (CC-BY-4.0)]
-    D --> K[Auseawesome (CC0)]
-    D --> L[Luanti 紋理包 (CC0/CC-BY-SA)]
+    B --> F["Create Mod (MIT) blockstates"]
+    B --> G["EnderIO (Unlicense) blockstates"]
+    C --> H["Create Mod (MIT) models"]
+    C --> I["EnderIO (Unlicense) models"]
+    D --> J["unused-textures (CC-BY-4.0)"]
+    D --> K["Auseawesome (CC0)"]
+    D --> L["Luanti 紋理包 (CC0/CC-BY-SA)"]
     E --> M[PrismarineJS/minecraft-data 自行轉換]
 ```
 
