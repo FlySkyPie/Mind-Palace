@@ -1,5 +1,8 @@
 # BitBake 用於 C++ 依賴組織以取代 Embedding 的可行性分析
 
+> [!WARNING] 對齊失敗
+> "instead of Embedding" 是指"不將 BitBack 用於嵌入式開發。而是單純處理套件仰賴問題"，不是指"將第三方套件嵌入在專案中"
+
 ## 摘要
 
 本報告探討能否使用 Yocto Project 的 BitBake 來組織一般 C++ 專案中的第三方函式庫依賴，以取代傳統的 embedding（vendoring，將原始碼直接放入專案倉庫）做法。結論是：技術上可行但高度不建議。BitBake 的 DEPENDS 機制與 SRC_URI 確實具備依賴管理所需的基本能力，但其設計目標是完整嵌入式 Linux 發行版建置，而非單一應用程式的第三方函式庫管理。對於一般 C++ 專案，Conan、vcpkg、CMake FetchContent 或 CPM.cmake 是更合適的選擇。
