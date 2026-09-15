@@ -20,6 +20,14 @@
 
 ## 技術決策
 
+### Cuberite
+
+C++ 實做的 Minecraft Server，動態支援 1.8~1.12.2 版本的 Minecraft 協定，內建基於 Lua 的插件系統。開發已於 2020 年放緩，之後僅有零星的更新。
+
+### Botcraft
+
+C++ 實做的 Minecraft Client，主要定位為無頭機器人函式庫，渲染能力為附帶且不完善，靜態支援 1.12.2~26.2 版本的 Minecraft 協定，定位為「個人學習」而非「社群」的開源專案，以一個月一次的頻率穩定更新。
+
 ### OpenBMC
 
 最近從 Web Frontend 轉職 OpenBMC，所以需要累積 C++ 的經驗，因此專案將使用以 C++ 為基礎的生態系，bitbake 的技術選型也是出於相同的考慮。
