@@ -1,5 +1,8 @@
 # Kodus AI 背景調查報告
 
+> [!WARNING] 對齊失敗
+> "背景調查" 是指創投、資金背景，而非專案簡介。
+
 ## 專案概述
 
 Kodus AI（GitHub: `kodustech/kodus-ai`）是一個**開源的 AI Code Review 平台**，定位為「CodeRabbit 的開源替代品」[^repo]。其 AI 審查員名為 **Kody**，能夠直接於 PR 上提供具備上下文感知的程式碼審查、標記風險等級並給出具體修復建議。

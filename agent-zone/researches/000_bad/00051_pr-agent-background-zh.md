@@ -1,5 +1,8 @@
 # PR-Agent 背景調查報告
 
+> [!WARNING] 對齊失敗
+> "背景調查" 是指創投、資金背景，而非專案簡介。
+
 ## 概述
 
 PR-Agent（亦稱 The PR Agent）是一套開源、AI 驅動的程式碼審查（code review）代理工具，專為 Pull Request 自動化審查而設計。它目前擁有約 13,000 顆 GitHub Stars、1,900 個 Forks，採用 MIT 授權條款，主要開發語言為 Python。[^github-readme]
