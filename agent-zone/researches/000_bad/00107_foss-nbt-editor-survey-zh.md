@@ -1,5 +1,8 @@
 # FOSS Minecraft NBT 編輯器調查：聚焦 Web UI 方案
 
+> [!WARNING] 對齊失敗
+> "editor" 是指 3D 編輯器，不是二進制檔案編輯器。
+
 ## 調查背景
 
 Minecraft 的 NBT（Named Binary Tag）格式用於儲存玩家資料、世界資料、結構方塊等遊戲元素。本篇調查範圍限定在**自由與開源軟體**（FOSS, Free and Open Source Software）領域內能夠編輯 `.nbt` 檔案的編輯器，並優先考量 Web UI（瀏覽器介面）方案。
