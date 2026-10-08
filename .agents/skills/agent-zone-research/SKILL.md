@@ -47,6 +47,8 @@ The lock file is a coordination mechanism for multiple agents working simultaneo
 - Every fact must be traceable to a cited source
 - Critically reflect on sources: consider bias, recency, authority, and corroboration
 - NEVER invent sources or citations — if you can't find a source, state that clearly
+- **Do NOT read other agents' reports** in `agent-zone/researches/` during your research — only if the human explicitly asks you to read them
+- **GitHub star consideration**: When the research subject involves GitHub projects, include star counts in the report. If a project has very low stars (< ~100), consider whether it's worth reporting — unless the research topic is niche enough that only low-star projects exist, in which case report them anyway with appropriate context
 
 ### 4. Footnotes and citations
 
