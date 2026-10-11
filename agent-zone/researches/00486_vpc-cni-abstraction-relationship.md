@@ -98,40 +98,24 @@ VPC 原生 CNI 則賦予 Pod **真實的 VPC 身分**，Pod 是雲端網路的�
 
 ## 5. 抽象層級架構
 
-```
-實體網路（AWS 全球基礎設施 / Google Andromeda）
-        │
-        ▼
-        VPC（虛擬私有雲）
-        │  - 邏輯隔離邊界
-        │  - 定義 IP 空間（CIDR）
-        │  - 路由表、防火牆規則
-        │
-        ▼
-    ┌───┴────────────────────┐
-    │  AWS                   │  GCP
-    │  Subnets（AZ 層級）     │  Subnets（區域層級）
-    │  ENIs                  │  Alias IP Ranges
-    │  （彈性網路介面）       │  （子網次要 IP 範圍）
-    └───┬────────────────────┘
-        │
-        ▼
-        CNI 轉譯層
-        │
-        ├── AWS VPC CNI:  Pod → ENI 次要 IP（ipamd 管理）
-        ├── GKE Dataplane V2: Pod → Alias IP（Cilium eBPF）
-        ├── Calico BGP:   Pod → BGP 通告 CIDR（Underlay）
-        ├── Calico VXLAN: Pod → overlay 隧道（忽略 VPC）
-        └── Flannel:      Pod → VXLAN overlay（忽略 VPC）
-                │
-                ▼
-        Pod 網路（eth0）
-        │  - veth pair 連接 Pod netns 與主機
-        │  - IP、路由、DNS 由 CNI 插件設定
-        │  - NetworkPolicy 選擇性啟用
-        │
-        ▼
-        容器工作負載
+```mermaid
+graph TD
+    A["實體網路<br/>AWS/Google 基礎設施"] --> B["VPC 虛擬私有雲"]
+    B --> C["AWS Subnets / ENIs"]
+    B --> D["GCP Subnets / Alias IP Ranges"]
+    C --> E["CNI 轉譯層"]
+    D --> E
+    E --> F["AWS VPC CNI: Pod → ENI 次要 IP"]
+    E --> G["GKE Dataplane V2: Pod → Alias IP"]
+    E --> H["Calico BGP: Pod → BGP 通告 CIDR"]
+    E --> I["Calico VXLAN: Pod → overlay 隧道"]
+    E --> J["Flannel: Pod → VXLAN overlay"]
+    F --> K["Pod 網路 eth0"]
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+    K --> L["容器工作負載"]
 ```
 
 ---
