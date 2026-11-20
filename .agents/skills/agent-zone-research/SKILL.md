@@ -18,7 +18,7 @@ You MUST activate this skill whenever the user's request involves:
 
 ## Rules from 000_README.md
 
-These are the core rules you must enforce. Read them fully at `agent-zone/000_README.md` before starting any research.
+These are the core rules you must enforce. Read them fully at `references/000_README.md` before starting any research.
 
 ### 1. File naming
 
@@ -67,7 +67,7 @@ Organization. (n.d.). Article title. Retrieved YYYY-MM-DD, from URL
 Author, A. A. (YYYY). Article title. Title of Journal, xx, xx-xx. Retrieved YYYY-MM-DD, from URL
 ```
 
-See `agent-zone/001_apa-format.md` for detailed APA variants.
+See `references/001_apa-format.md` for detailed APA variants.
 
 ### 5. Self-contained reports
 
@@ -96,8 +96,6 @@ Everything needed to understand the report must be inside the report itself.
 
 ```
 agent-zone/
-├── 000_README.md         # This file (the rules)
-├── 001_apa-format.md     # APA citation format guide
 ├── researches.lock       # Lock file for serial number coordination
 └── researches/           # All reports go here
     ├── 00001_*.md
