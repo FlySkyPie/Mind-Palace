@@ -1,0 +1,13 @@
+version = 1
+
+[[annotations]]
+path = "**"
+SPDX-FileCopyrightText = "MIT"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = "agent-zone/**"                  # Research output synthesised from Internet sources.
+precedence = "override"
+SPDX-FileCopyrightText = "NOASSERTION"
+SPDX-License-Identifier = "LicenseRef-StatusUndetermined"
+SPDX-FileComment = "Research notes compiled from third-party sources retrieved from the Internet. The licensing status of the underlying material is undetermined; no licence is asserted by the distributor."

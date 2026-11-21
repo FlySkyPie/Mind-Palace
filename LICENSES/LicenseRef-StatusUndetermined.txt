@@ -1,0 +1,13 @@
+The licensing status of files covered by this identifier is undetermined.
+
+No licence is asserted by the distributor of this project. The distributor
+does not grant, and is not in a position to grant, any rights in these
+files. Copyright, if any, remains with the respective authors.
+
+These files were retrieved from third parties on the Internet, or derived
+from third-party generated content, and no reliable licensing information
+could be established for them. They are listed in this project only for
+reference, commentary, or research purposes.
+
+Provenance, where known, is recorded in each file's metadata and/or in the
+SPDX-FileComment entries of this project's REUSE.toml.
