@@ -1,0 +1,3 @@
+permissions allow agentic_fetch fetch web_search sourcegraph write edit multiedit view ls grep glob
+
+permissions deny bash
