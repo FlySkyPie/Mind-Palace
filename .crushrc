@@ -1,6 +1,6 @@
-permissions allow agentic_fetch fetch web_search sourcegraph write edit multiedit view ls grep glob
+permissions allow agentic_fetch write edit multiedit view ls grep glob
 
-permissions deny bash download
+permissions deny bash download fetch web_search sourcegraph
 
 # Block subagent ability: hide all subagent tools from the agent.
 permissions deny agent_dispatch agent_send agent_status agent_stop
