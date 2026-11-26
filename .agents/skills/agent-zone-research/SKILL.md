@@ -14,11 +14,11 @@ You MUST activate this skill whenever the user's request involves:
 - Searching, researching, surveying, investigating, studying, exploring a topic
 - "Find information about...", "look into...", "tell me about X (and use web search)"
 - "Write a report on...", "document...", "research..."
-- Any task where you'd reasonably use web search or fetch tools
+- Requests that imply gathering facts from online sources, even when phrased informally
 
 ## Rules from 000_README.md
 
-These are the core rules you must enforce. Read them fully at `references/000_README.md` before starting any research.
+These are the core rules you must enforce. Read the full [Agent Zone report rules](references/000_README.md) before starting research.
 
 ### 1. File naming
 
@@ -32,14 +32,16 @@ These are the core rules you must enforce. Read them fully at `references/000_RE
 The lock file is a coordination mechanism for multiple agents working simultaneously. Follow these steps precisely:
 
 **Step A — Claim a number:**
-1. Read `agent-zone/researches.lock` to find the current largest number
+1. Read `agent-zone/researches.lock` and find the largest number across active and `D`-prefixed entries. If there are no entries, check report filenames under `agent-zone/researches/`, including subfolders (filenames only; do not open the reports). Start at `00001` only if there are none.
 2. Your serial number = largest number + 1
 3. Add your number to the lock file (plain number, no prefix) before starting research
 4. If the edit fails, another agent claimed it — re-read and retry with the next number
 
 **Step B — Release on completion:**
-- If your number is the **only** number in the file (other than `D`-prefixed ones): remove all `D`-prefixed numbers, add `D<your_number>`, and stop
-- If other numbers exist alongside yours: change your entry to `D<your_number>` and keep others
+- Re-read the lock file before releasing your number.
+- If your number is the only active entry, replace the contents with one `D`-prefixed entry holding the highest number across your entry and all completed entries. For example, active `758` and completed `D761` collapse to `D761`.
+- If other active entries remain, change just your entry to `D<your_number>`.
+- Update the lock with an exact-match edit, never a blind overwrite. If the edit fails, re-read the file and repeat Step B.
 
 ### 3. Research methodology
 
@@ -47,7 +49,7 @@ The lock file is a coordination mechanism for multiple agents working simultaneo
 - Every fact must be traceable to a cited source
 - Critically reflect on sources: consider bias, recency, authority, and corroboration
 - NEVER invent sources or citations — if you can't find a source, state that clearly
-- **DO NOT use the `bash` tool during research** — you only need web search, web fetch, file read, and file write tools to complete a research task. Read the lock file and reports with file-read tools, and write the report with a file-write tool. If you think you need `bash`, you are overcomplicating something — stop and reconsider.
+- Prefer dedicated web search/fetch and file read/write tools over shell commands. Never use shell commands to fetch web pages, or to write or edit the lock file or report files. Only if your environment has no dedicated file-read tool, you may use the workspace's native shell for read-only local inspection.
 - **Do NOT read other agents' reports** in `agent-zone/researches/` during your research — only if the human explicitly asks you to read them
 - **GitHub star consideration**: When the research subject involves GitHub projects, include star counts in the report. If a project has very low stars (< ~100), consider whether it's worth reporting — unless the research topic is niche enough that only low-star projects exist, in which case report them anyway with appropriate context
 
@@ -67,7 +69,7 @@ Organization. (n.d.). Article title. Retrieved YYYY-MM-DD, from URL
 Author, A. A. (YYYY). Article title. Title of Journal, xx, xx-xx. Retrieved YYYY-MM-DD, from URL
 ```
 
-See `references/001_apa-format.md` for detailed APA variants.
+See the [APA citation examples](references/001_apa-format.md) for source-specific formats. Convert dates in those examples to ISO 8601 when writing the report.
 
 ### 5. Self-contained reports
 
